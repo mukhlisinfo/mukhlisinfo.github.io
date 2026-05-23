@@ -1,0 +1,1064 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jurudesain.com — Jasa Desain Grafis, Kemasan, Logo</title>
+  <meta name="description" content="Jasa Desain Grafis, Kemasan, Logo, Banner, Poster, Spanduk, Menu, dan lainnya.">
+  <link rel="canonical" href="https://mukhlisinfo.github.io/archive/jurudesain/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #f97316;
+      --brand-dark: #ea6c0a;
+    }
+    body { background-color: #0f1117; color: #e2e8f0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    
+    /* Navbar */
+    .navbar { background-color: #161b27 !important; border-bottom: 1px solid #1e2535; }
+    .navbar-brand span { color: var(--brand); }
+    .nav-link:hover { color: var(--brand) !important; }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #161b27 0%, #1a1f30 50%, #0f1117 100%);
+      border-bottom: 1px solid #1e2535;
+      padding: 4rem 0 3rem;
+    }
+    .hero-badge { background-color: rgba(249,115,22,.15); color: var(--brand); border: 1px solid rgba(249,115,22,.3); display: inline-block; padding: .25rem .75rem; border-radius: 999px; font-size: .8rem; margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; }
+    .hero h1 .accent { color: var(--brand); }
+    .hero p { color: #94a3b8; max-width: 520px; }
+    .btn-brand { background-color: var(--brand); border-color: var(--brand); color: #fff; font-weight: 600; }
+    .btn-brand:hover { background-color: var(--brand-dark); border-color: var(--brand-dark); color: #fff; }
+    
+    /* Stats strip */
+    .stats-strip { background-color: #161b27; border-bottom: 1px solid #1e2535; padding: .75rem 0; }
+    .stat-item { text-align: center; }
+    .stat-item .num { font-size: 1.25rem; font-weight: 700; color: var(--brand); }
+    .stat-item .lbl { font-size: .7rem; color: #64748b; text-transform: uppercase; letter-spacing: .05em; }
+    
+    /* Filter bar */
+    .filter-bar { background-color: #0f1117; position: sticky; top: 56px; z-index: 100; border-bottom: 1px solid #1e2535; padding: .6rem 0; }
+    .filter-btn { background: transparent; border: 1px solid #2d3748; color: #94a3b8; border-radius: 999px; padding: .3rem .9rem; font-size: .8rem; cursor: pointer; transition: all .2s; white-space: nowrap; }
+    .filter-btn:hover, .filter-btn.active { background-color: var(--brand); border-color: var(--brand); color: #fff; }
+    
+    /* Cards */
+    .card-img-top { height: 185px; object-fit: cover; background-color: #1a1f30; }
+    .card-img-placeholder { height: 185px; background-color: #1a1f30; }
+    .post-card { background-color: #161b27; transition: transform .2s, box-shadow .2s; }
+    .post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.5) !important; }
+    .post-card .badge { font-size: .7rem; font-weight: 600; }
+    .post-card .card-title a:hover { color: var(--brand) !important; }
+    .col[data-cat].hidden { display: none !important; }
+    
+    /* Section heading */
+    .section-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--brand); font-weight: 700; }
+    
+    /* Footer */
+    footer { background-color: #161b27; border-top: 1px solid #1e2535; color: #64748b; font-size: .85rem; }
+    footer a { color: #94a3b8; text-decoration: none; }
+    footer a:hover { color: var(--brand); }
+    
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: #0f1117; } ::-webkit-scrollbar-thumb { background: #2d3748; border-radius: 3px; }
+    
+    /* No results */
+    #no-results { display: none; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-5" href="https://jurudesain.com">Juru<span>Desain</span></a>
+    <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="https://jurudesain.com">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://jurudesain.com/jasa-desain-grafis-online/">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://jurudesain.com/portofolio/">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Blog Archive</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="btn btn-brand btn-sm px-3" href="https://jurudesain.com/kontak/">Hubungi Kami</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <span class="hero-badge"><i class="bi bi-archive me-1"></i>Blog Archive</span>
+        <h1>Inspirasi & Tips <span class="accent">Desain Grafis</span> Terlengkap</h1>
+        <p class="mt-3 mb-4">Kumpulan 74 artikel pilihan seputar desain kemasan, logo, desain grafis, dan cover. Semua tersimpan di sini sebagai arsip.</p>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="https://jurudesain.com" class="btn btn-brand px-4"><i class="bi bi-house me-2"></i>Kunjungi Situs Utama</a>
+          <a href="https://jurudesain.com/jasa-desain-grafis-online/" class="btn btn-outline-secondary px-4">Lihat Layanan</a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center d-none d-lg-block">
+        <img src="https://jurudesain.com/wp-content/uploads/2023/06/landing-page-cover.png" alt="Jurudesain.com" class="img-fluid rounded-3" style="max-height:260px;object-fit:cover;opacity:.9;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats strip -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="row g-0 justify-content-center">
+      <div class="col-6 col-sm-3 stat-item border-end border-secondary-subtle">
+        <div class="num">74</div><div class="lbl">Artikel</div>
+      </div>
+      <div class="col-6 col-sm-3 stat-item border-end border-secondary-subtle">
+        <div class="num">5</div><div class="lbl">Kategori</div>
+      </div>
+      <div class="col-6 col-sm-3 stat-item border-end border-secondary-subtle">
+        <div class="num">31</div><div class="lbl">Halaman</div>
+      </div>
+      <div class="col-6 col-sm-3 stat-item">
+        <div class="num">2023</div><div class="lbl">Sejak</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filter bar -->
+<div class="filter-bar">
+  <div class="container">
+    <div class="d-flex gap-2 overflow-auto pb-1" style="-ms-overflow-style:none;scrollbar-width:none;">
+      <button class="filter-btn active" data-filter="all"><i class="bi bi-grid me-1"></i>Semua</button>
+      <button class="filter-btn" data-filter="desain-grafis"><i class="bi bi-vector-pen me-1"></i>Desain Grafis</button>
+      <button class="filter-btn" data-filter="kemasan"><i class="bi bi-box-seam me-1"></i>Kemasan</button>
+      <button class="filter-btn" data-filter="logo"><i class="bi bi-badge-tm me-1"></i>Logo</button>
+      <button class="filter-btn" data-filter="cover"><i class="bi bi-journal-richtext me-1"></i>Cover</button>
+    </div>
+  </div>
+</div>
+
+<!-- Posts grid -->
+<main class="container py-5">
+  <div class="mb-4 d-flex justify-content-between align-items-center">
+    <div>
+      <div class="section-label mb-1">Arsip Konten</div>
+      <h2 class="h5 fw-bold mb-0">Semua Artikel <span class="text-secondary fw-normal fs-6" id="post-count">(74 artikel)</span></h2>
+    </div>
+    <a href="https://jurudesain.com/blog/" class="btn btn-outline-secondary btn-sm d-none d-sm-inline-flex align-items-center gap-1">
+      <i class="bi bi-arrow-up-right-square"></i> Blog Aktif
+    </a>
+  </div>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="posts-grid">
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/berapa-gaji-desainer-grafis/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2024/12/Career-in.-graphic-designers-300x122.webp" class="card-img-top" alt="Berapa Gaji Desainer Grafis di Indonesia?" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/berapa-gaji-desainer-grafis/" class="text-decoration-none text-reset stretched-link">Berapa Gaji Desainer Grafis di Indonesia?</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">berapa gaji desainer grafis? JuruDesain.com - Pernahkah kamu bertanya-tanya, "Berapa sih gaji desainer grafis? Atau mung...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>16 Des 2024</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-digital/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2024/12/digital-design-300x221.jpg" class="card-img-top" alt="Apa Itu Desain Digital, Contoh, Program, dan Penjelasannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-digital/" class="text-decoration-none text-reset stretched-link">Apa Itu Desain Digital, Contoh, Program, dan Penjelasannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">digital design JuruDesain.com - Pernah nggak sih kamu kagum melihat poster keren di Instagram, tampilan website yang sup...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Des 2024</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/aplikasi-desain-grafis-di-hp/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2024/12/aplikasi-desain-grafis-di-hp-300x169.webp" class="card-img-top" alt="9 Aplikasi Desain Grafis di HP Android Gratis & Offline" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/aplikasi-desain-grafis-di-hp/" class="text-decoration-none text-reset stretched-link">9 Aplikasi Desain Grafis di HP Android Gratis & Offline</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">aplikasi desain grafis di hp JuruDesain.com - Di zaman serba digital ini, desain grafis nggak lagi cuma untuk para profe...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Des 2024</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/profesi-desain-grafis-terganti-ai/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ai-vs-desainer-300x225.jpg" class="card-img-top" alt="Profesi Desain Grafis Akan Tergantikan AI?" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/profesi-desain-grafis-terganti-ai/" class="text-decoration-none text-reset stretched-link">Profesi Desain Grafis Akan Tergantikan AI?</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">profesi desainer terganti ai? JuruDesain.com - Dalam beberapa tahun terakhir, kecerdasan buatan (AI) telah menjadi bagia...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/rio-purba/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/rio-purba-300x300.jpeg" class="card-img-top" alt="Rio Purba: Konten Kreator yang Menginspirasi Freelancer Desainer" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/rio-purba/" class="text-decoration-none text-reset stretched-link">Rio Purba: Konten Kreator yang Menginspirasi Freelancer Desainer</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Rio Purba JuruDesain.com - Rio Purba adalah salah satu nama yang tak asing lagi di dunia digital Indonesia. Sebagai seor...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cara-menjadi-desainer-grafis/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/cara-menjadi-desainer-grafis-300x200.jpg" class="card-img-top" alt="6 Cara Menjadi Desainer Grafis dalam Beberapa Langkah Sederhana" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cara-menjadi-desainer-grafis/" class="text-decoration-none text-reset stretched-link">6 Cara Menjadi Desainer Grafis dalam Beberapa Langkah Sederhana</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">cara menjadi desainer grafis Jurudesain.com - Menjadi desainer grafis adalah perjalanan yang menyenangkan dan penuh krea...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-komunikasi-visual-smk/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/DKV-300x200.jpg" class="card-img-top" alt="Desain Komunikasi Visual SMK Itu Gimana Sih? Baca Ulasan Lengkap Ini" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-komunikasi-visual-smk/" class="text-decoration-none text-reset stretched-link">Desain Komunikasi Visual SMK Itu Gimana Sih? Baca Ulasan Lengkap Ini</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Desain Komunikasi Visual SMK JuruDesain.com - Pernah dengar istilah Desain Komunikasi Visual (DKV)? Kalau kamu tertarik ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/digital-printing-adalah/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/digital-printing-harga-300x188.jpg" class="card-img-top" alt="Digital Printing Adalah: Ini Penjelasan Lengkap Digital Printing" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/digital-printing-adalah/" class="text-decoration-none text-reset stretched-link">Digital Printing Adalah: Ini Penjelasan Lengkap Digital Printing</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">digital printing JuruDesain.com - Di era modern ini, teknologi terus berkembang, termasuk dalam industri percetakan. Sal...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/ukuran-desain-mug/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ukuran-desain-mug-300x151.webp" class="card-img-top" alt="Ukuran Desain Mug Standar Berapa Sih?" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/ukuran-desain-mug/" class="text-decoration-none text-reset stretched-link">Ukuran Desain Mug Standar Berapa Sih?</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">ukuran desain mug JuruDesain.com - Desain mug custom kini semakin populer sebagai hadiah, merchandise, atau bahkan media...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/ukuran-desain-lanyard/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ukuran-Lanyard-300x300.webp" class="card-img-top" alt="Ukuran Desain Lanyard Sesuai Standar" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/ukuran-desain-lanyard/" class="text-decoration-none text-reset stretched-link">Ukuran Desain Lanyard Sesuai Standar</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Desain ukuran anyard JuruDesain.com - Lanyard atau tali ID card merupakan aksesori yang sering digunakan untuk menggantu...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/buku-desain-grafis/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/buku-desain-grafis-300x169.jpg" class="card-img-top" alt="14 Buku Desain Grafis yang Wajib Dibaca Desainer" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/buku-desain-grafis/" class="text-decoration-none text-reset stretched-link">14 Buku Desain Grafis yang Wajib Dibaca Desainer</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">buku desain grafis: JuruDesain.com - Apa yang Anda bayangkan ketika mendengar istilah "desain grafis"? Apakah itu tentan...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cara-menjadi-desainer-tanpa-kuliah/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/menjadi-desainer-tanpa-kuliah-300x200.jpg" class="card-img-top" alt="Cara Menjadi Desainer Tanpa Kuliah" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cara-menjadi-desainer-tanpa-kuliah/" class="text-decoration-none text-reset stretched-link">Cara Menjadi Desainer Tanpa Kuliah</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">menjadi desainer tanpa kuliah Jurudesain.com - Dunia terus berubah dengan cepat, membawa berbagai peluang baru bagi mere...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cara-membuat-portofolio-desain/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/cara-membuat-portofolio-300x169.jpeg" class="card-img-top" alt="Cara Membuat Portofolio Desain dalam 5 Langkah Sederhana" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cara-membuat-portofolio-desain/" class="text-decoration-none text-reset stretched-link">Cara Membuat Portofolio Desain dalam 5 Langkah Sederhana</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">cara membuat portofolio Jurudesain.com - Di era digital seperti sekarang, memiliki portofolio online bukan lagi sekadar ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/tugas-desain-grafis/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/tugas-desain-grafis-300x200.jpg" class="card-img-top" alt="Tugas Desain Grafis dan Tanggung Jawab Kerjanya di Perusahaan" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/tugas-desain-grafis/" class="text-decoration-none text-reset stretched-link">Tugas Desain Grafis dan Tanggung Jawab Kerjanya di Perusahaan</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">tugas desain grafis JuruDesain.com - Desain grafis adalah salah satu komponen terpenting dalam dunia bisnis dan pemasara...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>5 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-beras/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kemasan-beras-2-225x300.jpg" class="card-img-top" alt="12 Ide Desain Kemasan Beras" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-beras/" class="text-decoration-none text-reset stretched-link">12 Ide Desain Kemasan Beras</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com –&nbsp;Dalam dunia yang semakin kompetitif, kemasan produk bukan hanya sekadar wadah untuk menyimpan bara...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>15 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/fakta-unik-desain-kemasan/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/fakta-unik-kemasan-300x176.jpeg" class="card-img-top" alt="Fakta Unik Desain Kemasan" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/fakta-unik-desain-kemasan/" class="text-decoration-none text-reset stretched-link">Fakta Unik Desain Kemasan</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Desain kemasan sering kali dianggap sebagai elemen yang hanya berfungsi untuk melindungi produk. Namun,...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cara-memilih-kemasan/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/cara-memilih-kemasan-3-300x200.jpeg" class="card-img-top" alt="Panduan Cara Memilih Kemasan yang Tepat untuk Produk Anda " loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cara-memilih-kemasan/" class="text-decoration-none text-reset stretched-link">Panduan Cara Memilih Kemasan yang Tepat untuk Produk Anda </a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Memilih kemasan yang tepat merupakan salah satu faktor kunci dalam kesuksesan pemasaran produk. Kemasan...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cara-membuat-brief-desain/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/membuat-brief-desain-300x159.jpg" class="card-img-top" alt="Cara Membuat Brief Desain yang Benar dan Efektif" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cara-membuat-brief-desain/" class="text-decoration-none text-reset stretched-link">Cara Membuat Brief Desain yang Benar dan Efektif</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Dalam dunia desain, komunikasi yang efektif antara klien dan desainer adalah kunci untuk menciptakan ha...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/nasihat-jaya-setiabudi-tentang-kemasan/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/jaya-setiabudi.jpg" class="card-img-top" alt="Strategi Kemasan: 20 Nasihat Jaya Setiabudi untuk Meningkatkan Penjualan" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/nasihat-jaya-setiabudi-tentang-kemasan/" class="text-decoration-none text-reset stretched-link">Strategi Kemasan: 20 Nasihat Jaya Setiabudi untuk Meningkatkan Penjualan</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">jaya setiabudi Jurudesain.com –&nbsp;Jaya Setiabudi, yang lebih dikenal dengan nama panggilan “Mas J”, adalah seorang pe...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/kenapa-desain-mahal/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kenapa-desain-mahal-2-300x225.jpg" class="card-img-top" alt="4 Alasan Kenapa Harga Desain Mahal" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/kenapa-desain-mahal/" class="text-decoration-none text-reset stretched-link">4 Alasan Kenapa Harga Desain Mahal</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">kenapa desain mahal Jurudesain.com - Desain telah menjadi bagian penting dalam berbagai aspek kehidupan kita, mulai dari...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/kemasan-ramah-lingkungan/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kemasan-ramah-lingkungan-200x300.webp" class="card-img-top" alt="Apa Itu Kemasan Ramah Lingkungan, Jenis, & Penerapannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/kemasan-ramah-lingkungan/" class="text-decoration-none text-reset stretched-link">Apa Itu Kemasan Ramah Lingkungan, Jenis, & Penerapannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">kemasan ramah lingkungan Jurudesain.com -&nbsp;Dalam dunia bisnis yang terus berkembang, isu keberlanjutan menjadi semak...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-laris/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/desain-kemasan-laris-300x181.png" class="card-img-top" alt="7 Tips Desain Kemasan yang Bikin Laris Jualan" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-laris/" class="text-decoration-none text-reset stretched-link">7 Tips Desain Kemasan yang Bikin Laris Jualan</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">desain kemasan laris Jurudesain.com - Desain kemasan memiliki peran yang sangat penting dalam dunia pemasaran, terutama ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/plastik-biodegradable/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/Plastik-Biodegradable2-300x300.png" class="card-img-top" alt="Apa Itu Kemasan Plastik Biodegradable, Manfaat, Harga, dan Cara Kerjanya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/plastik-biodegradable/" class="text-decoration-none text-reset stretched-link">Apa Itu Kemasan Plastik Biodegradable, Manfaat, Harga, dan Cara Kerjanya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Plastik Biodegradable Jurudesain.com - Plastik telah menjadi bagian tak terpisahkan dalam kehidupan sehari-hari, digunak...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-susu/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kemasan-susu-2-300x151.jpg" class="card-img-top" alt="22 Ide Desain Kemasan Susu" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-susu/" class="text-decoration-none text-reset stretched-link">22 Ide Desain Kemasan Susu</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Konsumen modern menginginkan lebih dari sekadar produk yang bergizi. Mereka mencari pengalaman yang kom...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>20 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/kelebihan-dan-kekurangan-kemasan-plastik/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kelebihan-kekurangan-kemasan-plastik-300x243.jpg" class="card-img-top" alt="4 Kelebihan dan Kekurangan Kemasan Plastik" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/kelebihan-dan-kekurangan-kemasan-plastik/" class="text-decoration-none text-reset stretched-link">4 Kelebihan dan Kekurangan Kemasan Plastik</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">kelebihan kekurangan kemasan plastik Jurudesain.com -&nbsp;Kemasan plastik telah menjadi bagian tak terpisahkan dari keh...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>21 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-burger/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kemasan-burger-300x300.jpg" class="card-img-top" alt="28 Ide dan Contoh Desain Kemasan Burger" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-burger/" class="text-decoration-none text-reset stretched-link">28 Ide dan Contoh Desain Kemasan Burger</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Dalam industri makanan cepat saji, khususnya burger, kemasan memiliki peran penting yang sering kali di...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>24 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-donat/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/b4eb09cba07d932a860173e5dddd4c9d-241x300.jpg" class="card-img-top" alt="26 Ide/ Contoh Desain Kemasan Donat" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-donat/" class="text-decoration-none text-reset stretched-link">26 Ide/ Contoh Desain Kemasan Donat</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com -&nbsp;Donat adalah salah satu camilan yang disukai oleh banyak orang, baik untuk dinikmati sendiri maupu...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>24 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-jamu/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kemasan-jamu-200x300.jpg" class="card-img-top" alt="26 Ide/ Contoh Desain Kemasan Jamu" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-jamu/" class="text-decoration-none text-reset stretched-link">26 Ide/ Contoh Desain Kemasan Jamu</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Jamu, sebagai minuman tradisional khas Indonesia, telah menjadi bagian penting dari warisan budaya dan ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>24 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-keripik-singkong/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kemasan-keripik-singkong-300x300.jpg" class="card-img-top" alt="17 Ide/ Contoh Desain Kemasan Keripik Singkong" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-keripik-singkong/" class="text-decoration-none text-reset stretched-link">17 Ide/ Contoh Desain Kemasan Keripik Singkong</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Keripik singkong adalah camilan yang telah dikenal luas oleh masyarakat Indonesia, menawarkan rasa guri...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>24 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-obat/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kemasan-obat-2-214x300.jpg" class="card-img-top" alt="22 Ide/ Contoh Desain Kemasan Obat" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-obat/" class="text-decoration-none text-reset stretched-link">22 Ide/ Contoh Desain Kemasan Obat</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Kemasan obat memiliki peran yang sangat penting, bukan hanya sebagai pelindung produk, tetapi juga seba...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>24 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-parfum/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/kemasan-parfum-2-175x300.jpg" class="card-img-top" alt="23 Ide/ Contoh Desain Kemasan Parfum" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-parfum/" class="text-decoration-none text-reset stretched-link">23 Ide/ Contoh Desain Kemasan Parfum</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Kemasan parfum bukan hanya berfungsi sebagai pelindung botol dan mencegah kebocoran, tetapi juga menjad...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>24 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-martabak/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-martabak-3-300x300.jpg" class="card-img-top" alt="6 Ide/ Contoh Desain Kemasan Martabak" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-martabak/" class="text-decoration-none text-reset stretched-link">6 Ide/ Contoh Desain Kemasan Martabak</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Martabak, sebagai salah satu camilan favorit di Indonesia, memiliki daya tarik tersendiri baik dari seg...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-basreng/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-basreng-17-300x300.jpg" class="card-img-top" alt="17 Ide/ Contoh Desain Kemasan Basreng" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-basreng/" class="text-decoration-none text-reset stretched-link">17 Ide/ Contoh Desain Kemasan Basreng</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com –&nbsp;Basreng, atau bakso goreng, adalah salah satu camilan khas Indonesia yang semakin populer di berba...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-cookies/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-cookies-21-300x217.jpg" class="card-img-top" alt="21 Ide/ Contoh Desain Kemasan Cookies" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-cookies/" class="text-decoration-none text-reset stretched-link">21 Ide/ Contoh Desain Kemasan Cookies</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Cookies, sebagai salah satu camilan yang disukai oleh semua kalangan, memiliki daya tarik yang tak leka...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-kardus-roti/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kardus-roti-13-300x300.jpg" class="card-img-top" alt="21 Ide/ Contoh Desain Kemasan Kardus Roti" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-kardus-roti/" class="text-decoration-none text-reset stretched-link">21 Ide/ Contoh Desain Kemasan Kardus Roti</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Roti, sebagai salah satu produk makanan yang populer dan digemari banyak orang, membutuhkan kemasan yan...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-kopi/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-kopi-23-163x300.jpg" class="card-img-top" alt="22 Ide/ Contoh Desain Kemasan Kopi" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-kopi/" class="text-decoration-none text-reset stretched-link">22 Ide/ Contoh Desain Kemasan Kopi</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Kopi tidak hanya menjadi minuman favorit yang dinikmati di seluruh dunia, tetapi juga merupakan simbol ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-label-stiker-madu/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-madu-2-200x300.jpg" class="card-img-top" alt="27 Ide/ Contoh Desain Kemasan/Label/Stiker Madu" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-label-stiker-madu/" class="text-decoration-none text-reset stretched-link">27 Ide/ Contoh Desain Kemasan/Label/Stiker Madu</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Madu merupakan salah satu produk alami yang tidak hanya diminati karena manfaat kesehatannya, tetapi ju...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-mochi/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-mochi-2-300x300.jpg" class="card-img-top" alt="27 Ide/ Contoh Desain Kemasan Mochi" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-mochi/" class="text-decoration-none text-reset stretched-link">27 Ide/ Contoh Desain Kemasan Mochi</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Mochi, dengan teksturnya yang lembut dan rasa yang khas, telah menjadi camilan yang digemari oleh banya...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-keripik-pisang/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-keripik-pisang-2-240x300.jpg" class="card-img-top" alt="35 Ide/ Contoh Desain Kemasan Keripik Pisang" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-keripik-pisang/" class="text-decoration-none text-reset stretched-link">35 Ide/ Contoh Desain Kemasan Keripik Pisang</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Keripik pisang adalah salah satu camilan favorit yang tidak hanya populer di kalangan lokal, tetapi jug...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-pasta-gigi/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-pasta-gigi-18-300x300.jpg" class="card-img-top" alt="19 Ide/ Contoh Desain Kemasan Pasta Gigi" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-pasta-gigi/" class="text-decoration-none text-reset stretched-link">19 Ide/ Contoh Desain Kemasan Pasta Gigi</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Pasta gigi adalah produk kebutuhan sehari-hari yang sangat akrab dengan konsumen. Meski begitu, persain...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-plastik-roti/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-roti-dari-plastik-2-200x300.jpg" class="card-img-top" alt="34 Ide/ Contoh Desain Kemasan Plastik Roti" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-plastik-roti/" class="text-decoration-none text-reset stretched-link">34 Ide/ Contoh Desain Kemasan Plastik Roti</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Roti merupakan salah satu produk pangan yang banyak diminati karena kepraktisannya dan beragam varian r...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-kemasan-teh/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-desain-kemasan-teh-23-300x199.jpg" class="card-img-top" alt="22 Ide/ Contoh Desain Kemasan Teh Celup" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-kemasan-teh/" class="text-decoration-none text-reset stretched-link">22 Ide/ Contoh Desain Kemasan Teh Celup</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Teh celup adalah salah satu minuman yang paling populer di dunia, dikenal karena kemudahan penyajiannya...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-stand-booth-pameran-bazar/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/ide-Desain-Stand-Booth-Pameran-Bazar-7-275x300.jpg" class="card-img-top" alt="21 Ide Desain Stand Booth Pameran dan Bazar" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-stand-booth-pameran-bazar/" class="text-decoration-none text-reset stretched-link">21 Ide Desain Stand Booth Pameran dan Bazar</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com -&nbsp;Dalam sebuah pameran atau bazar, stand booth sering kali menjadi elemen pertama yang menarik perha...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/food-grade/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/01/food-grade2-300x300.png" class="card-img-top" alt="Apa Itu Food Grade? Jenis dan Manfaat Penggunaannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/food-grade/" class="text-decoration-none text-reset stretched-link">Apa Itu Food Grade? Jenis dan Manfaat Penggunaannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com –&nbsp;“Food Grade” mengacu pada bahan-bahan atau produk yang telah diuji dan disetujui untuk digunakan d...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>30 Jan 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/duplex/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/kertas-karton-duplex.webp" class="card-img-top" alt="Kertas Karton Duplex: Pengertian, Kegunaan, dan Keunggulannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/duplex/" class="text-decoration-none text-reset stretched-link">Kertas Karton Duplex: Pengertian, Kegunaan, dan Keunggulannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com – Apakah Anda mengetahui bahwa kemasan makanan yang Anda beli di supermarket atau undangan pernikahan yan...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>14 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/kertas-kraft/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/kemasan-kertas-craft2-1024x683.webp" class="card-img-top" alt="Bahan Kertas Kraft: Ciri-ciri, Jenis, Fungsi & Keunggulannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/kertas-kraft/" class="text-decoration-none text-reset stretched-link">Bahan Kertas Kraft: Ciri-ciri, Jenis, Fungsi & Keunggulannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com – Kertas kraft, ya, kamu pasti pernah melihatnya. Itu yang warna coklat, agak kasar, dan sering digunakan...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>14 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/paper-bag/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/paper-bag.jpg" class="card-img-top" alt="Apa itu Paper Bag: Pengertian, Fungsi, dan Penggunaannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/paper-bag/" class="text-decoration-none text-reset stretched-link">Apa itu Paper Bag: Pengertian, Fungsi, dan Penggunaannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com –&nbsp;Dalam dunia modern yang semakin sadar lingkungan, tas kertas atau yang dikenal dengan istilah “pap...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>14 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/pentingnya-desain-produk/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/pentingnya-desain-kemasan2.jpg" class="card-img-top" alt="Mengapa Desain Kemasan Produk Sangat Penting?" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/pentingnya-desain-produk/" class="text-decoration-none text-reset stretched-link">Mengapa Desain Kemasan Produk Sangat Penting?</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Desain kemasan bukan hanya tentang menempatkan produk di dalam kotak atau botol; ini adalah seni dan il...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/sejarah-kemasan/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/sejarah-packaging.jpg" class="card-img-top" alt="Sejarah Kemasan dari Masa ke Masa" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/sejarah-kemasan/" class="text-decoration-none text-reset stretched-link">Sejarah Kemasan dari Masa ke Masa</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Kemasan telah menjadi bagian integral dari kehidupan manusia sejak zaman prasejarah, bertindak sebagai ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/kemasan-primer-sekunder-dan-tersier/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/kemasan-primer-sekunder-dan-tersier2.png" class="card-img-top" alt="Perbedaan Kemasan Primer, Sekunder, dan Tersier beserta Contohnya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/kemasan-primer-sekunder-dan-tersier/" class="text-decoration-none text-reset stretched-link">Perbedaan Kemasan Primer, Sekunder, dan Tersier beserta Contohnya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Kemasan adalah elemen penting dalam dunia produksi dan distribusi barang, memainkan peran kunci dalam m...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/apa-saja-yang-perlu-dicantumkan-pada-belakang-produk/" class="text-decoration-none"><div class="card-img-placeholder d-flex align-items-center justify-content-center"><i class="bi bi-image text-secondary" style="font-size:2.5rem"></i></div></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/apa-saja-yang-perlu-dicantumkan-pada-belakang-produk/" class="text-decoration-none text-reset stretched-link">Kemasan Belakang Produk: Apa Saja yang Perlu Dicantumkan & Contohnya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Kemasan belakang produk adalah tempat di mana konsumen mencari informasi penting untuk membuat keputusa...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/tips-memilih-kemasan-kosmetik-skincare/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/kemasan-kosmetik-2-1024x683.jpg" class="card-img-top" alt="Tips Memilih Kemasan Kosmetik/ Skincare yang Tepat untuk Produk Anda" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/tips-memilih-kemasan-kosmetik-skincare/" class="text-decoration-none text-reset stretched-link">Tips Memilih Kemasan Kosmetik/ Skincare yang Tepat untuk Produk Anda</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Pemilihan kemasan yang tepat untuk produk kosmetik dan skincare bukan hanya sekedar estetika, tetapi ju...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/standing-pouch/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/standing-pouch.jpg" class="card-img-top" alt="Apa Itu Standing Pouch: Pengertian, Jenis, kelebihan dan kekurangannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/standing-pouch/" class="text-decoration-none text-reset stretched-link">Apa Itu Standing Pouch: Pengertian, Jenis, kelebihan dan kekurangannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Dalam era modern ini, kemasan tidak hanya berfungsi sebagai wadah untuk produk tetapi juga sebagai alat...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/kemasan-aluminium-foil/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/alumunium-foil2.jpg" class="card-img-top" alt="Kemasan Aluminium Foil: Pengertian, Manfaat, & Keunggulannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/kemasan-aluminium-foil/" class="text-decoration-none text-reset stretched-link">Kemasan Aluminium Foil: Pengertian, Manfaat, & Keunggulannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Aluminium foil pertama kali diperkenalkan sebagai material kemasan pada tahun 1911 oleh sebuah perusaha...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/jenis-jenis-kardus-dan-penggunaannya-dalam-pengemasan-produk/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/Corrugated-Cardboard.jpg" class="card-img-top" alt="Jenis-Jenis Kardus dan Penggunaannya dalam Pengemasan Produk" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/jenis-jenis-kardus-dan-penggunaannya-dalam-pengemasan-produk/" class="text-decoration-none text-reset stretched-link">Jenis-Jenis Kardus dan Penggunaannya dalam Pengemasan Produk</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Hari ini kita akan membahas sesuatu yang mungkin kita anggap sepele, tapi sebenarnya sangat penting dal...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/kertas-ivory/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/kertas-ivory.jpg" class="card-img-top" alt="Kertas Ivory: Pengertian, Karakteristik, Manfaat, dan Keunggulannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/kertas-ivory/" class="text-decoration-none text-reset stretched-link">Kertas Ivory: Pengertian, Karakteristik, Manfaat, dan Keunggulannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Selamat datang kembali ke blog kita, teman-teman! Hari ini, kita akan membahas sesuatu yang mungkin sud...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/hardbox/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/hardbox-3.jpg" class="card-img-top" alt="Apa itu Hardbox, Jenis, dan Keunggulannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/hardbox/" class="text-decoration-none text-reset stretched-link">Apa itu Hardbox, Jenis, dan Keunggulannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Hardbox adalah kotak kemasan yang sangat kuat dan eksklusif. Biasanya digunakan untuk barang-barang mew...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/rigid-box/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/girid-box3.jpg" class="card-img-top" alt="Rigid Box: Pengertian, Jenis, kelebihan dan kekurangannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/rigid-box/" class="text-decoration-none text-reset stretched-link">Rigid Box: Pengertian, Jenis, kelebihan dan kekurangannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Pernah lihat kotak-kotak mewah yang biasa dipakai untuk kemasan produk berkualitas tinggi? Itulah yang ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/keunggulan-kemasan-kertas/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/keunggulan-kemasan-kertas-5.jpeg" class="card-img-top" alt="Keunggulan Kemasan Kertas Dibandingkan dengan Bahan Lainnya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/keunggulan-kemasan-kertas/" class="text-decoration-none text-reset stretched-link">Keunggulan Kemasan Kertas Dibandingkan dengan Bahan Lainnya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Kemasan memainkan peran yang sangat penting dalam dunia industri, tidak hanya sebagai wadah untuk produ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="kemasan">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/perbedaan-hampers-dan-parcel/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/02/Apa-Perbedaan-Hampers-dan-Parcel-Temukan-Jawabannya-di-Sini.jpg" class="card-img-top" alt="Perbedaan Hampers dan Parcel yang Perlu Diketahui" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-success" data-filter="kemasan">Kemasan</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/perbedaan-hampers-dan-parcel/" class="text-decoration-none text-reset stretched-link">Perbedaan Hampers dan Parcel yang Perlu Diketahui</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Di Indonesia, memberikan hadiah saat Lebaran atau Tahun Baru adalah tradisi yang menyenangkan. Namun, a...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>19 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="desain-grafis">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/tepat-waktu-dalam-desain-dan-sholat/" class="text-decoration-none"><div class="card-img-placeholder d-flex align-items-center justify-content-center"><i class="bi bi-image text-secondary" style="font-size:2.5rem"></i></div></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-primary" data-filter="desain-grafis">Desain Grafis</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/tepat-waktu-dalam-desain-dan-sholat/" class="text-decoration-none text-reset stretched-link">Staf Jurudesain.com Selalu Tepat Waktu dalam Desain dan Sholat</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">/* STYLE KHUSUS WIDGET SAJA - TIDAK AKAN MEMPENGARUHI WEBSITE LAIN */ #shalat-widget-sidebar * { margin: 0; padding: 0; ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>26 Feb 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="logo">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cara-membuat-logo-3d-online-gratis/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/logo-3d-1024x576.jpg" class="card-img-top" alt="Cara Membuat Logo 3D Online Gratis" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-warning" data-filter="logo">Logo</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cara-membuat-logo-3d-online-gratis/" class="text-decoration-none text-reset stretched-link">Cara Membuat Logo 3D Online Gratis</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">logo 3d Jurudesain.com - Logo 3D semakin populer dalam dunia desain karena memberikan tampilan yang lebih menarik dan pr...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>8 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/apa-tujuan-dari-cover-buku-simak-jawabanya-disini/" class="text-decoration-none"><div class="card-img-placeholder d-flex align-items-center justify-content-center"><i class="bi bi-image text-secondary" style="font-size:2.5rem"></i></div></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/apa-tujuan-dari-cover-buku-simak-jawabanya-disini/" class="text-decoration-none text-reset stretched-link">Apa Tujuan dari Cover Buku? Simak Jawabanya Disini</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Ketika melihat sebuah buku di rak toko atau marketplace, hal pertama yang menarik perhatian tentu adala...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>10 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/apa-fungsi-cover-buku-simak-ulasan-singkatnya/" class="text-decoration-none"><div class="card-img-placeholder d-flex align-items-center justify-content-center"><i class="bi bi-image text-secondary" style="font-size:2.5rem"></i></div></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/apa-fungsi-cover-buku-simak-ulasan-singkatnya/" class="text-decoration-none text-reset stretched-link">Apa Fungsi Cover Buku? Simak Ulasan Singkatnya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Ketika melihat sebuah buku untuk pertama kali, apa yang membuat Anda tertarik untuk mengambilnya? Sebag...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>10 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/apa-yang-dimaksud-dengan-cover-buku/" class="text-decoration-none"><div class="card-img-placeholder d-flex align-items-center justify-content-center"><i class="bi bi-image text-secondary" style="font-size:2.5rem"></i></div></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/apa-yang-dimaksud-dengan-cover-buku/" class="text-decoration-none text-reset stretched-link">Apa yang Dimaksud dengan Cover Buku?</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Dalam dunia penerbitan, cover buku memiliki peran yang sangat penting. Cover bukan hanya sekadar pelind...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>11 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/konsep-dalam-membuat-cover/" class="text-decoration-none"><div class="card-img-placeholder d-flex align-items-center justify-content-center"><i class="bi bi-image text-secondary" style="font-size:2.5rem"></i></div></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/konsep-dalam-membuat-cover/" class="text-decoration-none text-reset stretched-link">9 Konsep dalam Membuat Cover Buku yang Benar</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Cover buku adalah elemen pertama yang dilihat calon pembaca sebelum mereka memutuskan untuk membeli ata...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>11 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/ukuran-cover-novel-dan-cara-menentukannya/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/cover-novel-1.jpg" class="card-img-top" alt="Ukuran Cover Novel dan Cara Menentukannya" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/ukuran-cover-novel-dan-cara-menentukannya/" class="text-decoration-none text-reset stretched-link">Ukuran Cover Novel dan Cara Menentukannya</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Dalam dunia penerbitan, ukuran cover novel memiliki peran penting dalam menentukan tampilan akhir buku....</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>12 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/bagian-bagian-buku-yang-harus-anda-ketahui/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/cover-buku-2.png" class="card-img-top" alt="Bagian-Bagian Buku yang Harus Anda Ketahui" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/bagian-bagian-buku-yang-harus-anda-ketahui/" class="text-decoration-none text-reset stretched-link">Bagian-Bagian Buku yang Harus Anda Ketahui</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Buku bukan hanya sekadar kumpulan halaman yang berisi teks dan gambar. Sebuah buku memiliki struktur ya...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>12 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cover-laporan-keuangan-word/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/Cover-Laporan-Keuangan-Word-724x1024.webp" class="card-img-top" alt="12 Cover Laporan Keuangan Word" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cover-laporan-keuangan-word/" class="text-decoration-none text-reset stretched-link">12 Cover Laporan Keuangan Word</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Jurudesain.com - Cover laporan keuangan merupakan elemen pertama yang dilihat oleh pembaca, baik itu investor, pemilik b...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>14 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cover-daftar-hadir-siswa/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/Daftar-Hadir-Siswa.jpeg" class="card-img-top" alt="8 Cover Daftar Hadir Siswa" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cover-daftar-hadir-siswa/" class="text-decoration-none text-reset stretched-link">8 Cover Daftar Hadir Siswa</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">Daftar Hadir Siswa Daftar Hadir Siswa Daftar Hadir Siswa Daftar Hadir Siswa Daftar Hadir Siswa Daftar Hadir Siswa Daftar...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>14 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/desain-cover-laporan-penelitian/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/cover-rpp.webp" class="card-img-top" alt="21 Desain Cover Laporan Penelitian" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/desain-cover-laporan-penelitian/" class="text-decoration-none text-reset stretched-link">21 Desain Cover Laporan Penelitian</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">cover rpp cover laporan penelitian cover laporan penelitian cover laporan penelitian cover laporan penelitian cover lapo...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/12-cover-modul-ajar-kurikulum-merdeka-menarik-untuk-dicontoh/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/modul-ajar-kurikulum-merdeka-2-724x1024.jpg" class="card-img-top" alt="12 Cover Modul Ajar Kurikulum Merdeka Menarik untuk Dicontoh" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/12-cover-modul-ajar-kurikulum-merdeka-menarik-untuk-dicontoh/" class="text-decoration-none text-reset stretched-link">12 Cover Modul Ajar Kurikulum Merdeka Menarik untuk Dicontoh</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">modul ajar kurikulum merdeka cover laporan penelitian modul ajar kurikulum merdeka modul ajar kurikulum merdeka modul aj...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/15-desain-cover-proposal-kegiatan-menarik-untuk-dicontoh/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/cover-proposal-kegiatan-724x1024.webp" class="card-img-top" alt="15 Desain Cover Proposal Kegiatan Menarik untuk Dicontoh" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/15-desain-cover-proposal-kegiatan-menarik-untuk-dicontoh/" class="text-decoration-none text-reset stretched-link">15 Desain Cover Proposal Kegiatan Menarik untuk Dicontoh</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">cover proposal kegiatan cover proposal kegiatan cover proposal kegiatan cover proposal kegiatan cover proposal kegiatan ...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-cat="cover">
+        <div class="card h-100 border-0 shadow-sm post-card">
+          <a href="blog/cover-rpp/" class="text-decoration-none"><img src="https://jurudesain.com/wp-content/uploads/2025/03/cover-rpp.webp" class="card-img-top" alt="10 Cover RPP Menarik yang Dapat Anda Contoh" loading="lazy" onerror="this.style.display='none'"></a>
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2"><span class="badge text-bg-info" data-filter="cover">Cover</span></div>
+            <h5 class="card-title fs-6 fw-semibold mb-2"><a href="blog/cover-rpp/" class="text-decoration-none text-reset stretched-link">10 Cover RPP Menarik yang Dapat Anda Contoh</a></h5>
+            <p class="card-text text-secondary small flex-grow-1">cover rpp cover rpp cover rpp cover rpp cover rpp cover rpp cover rpp cover rpp cover rpp Jurudesain.com - Rencana Pelak...</p>
+            <div class="mt-auto pt-2 border-top border-secondary-subtle"><small class="text-secondary"><i class="bi bi-calendar3 me-1"></i>25 Mar 2025</small></div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+  
+  <div id="no-results" class="text-center py-5">
+    <i class="bi bi-search text-secondary" style="font-size:3rem"></i>
+    <p class="text-secondary mt-3">Tidak ada artikel dalam kategori ini.</p>
+  </div>
+</main>
+
+<!-- CTA -->
+<section class="py-5" style="background-color:#161b27;border-top:1px solid #1e2535;border-bottom:1px solid #1e2535;">
+  <div class="container text-center">
+    <p class="section-label mb-2">Butuh Desain?</p>
+    <h3 class="fw-bold mb-3">Percayakan kebutuhan desain Anda kepada kami</h3>
+    <p class="text-secondary mb-4 mx-auto" style="max-width:480px">Kami melayani jasa desain logo, kemasan, banner, poster, spanduk, dan desain grafis lainnya.</p>
+    <a href="https://jurudesain.com/jasa-desain-grafis-online/" class="btn btn-brand px-5 py-2">
+      <i class="bi bi-pencil-square me-2"></i>Lihat Semua Layanan
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="fw-bold fs-5 mb-2">Juru<span style="color:var(--brand)">Desain</span></div>
+        <p class="small">Jasa Desain Grafis, Kemasan, Logo, Banner, Poster, Spanduk, Menu, dan lainnya.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="fw-semibold mb-2 text-light">Layanan</div>
+        <ul class="list-unstyled small">
+          <li><a href="https://jurudesain.com/jasa-desain-logo/">Jasa Desain Logo</a></li>
+          <li><a href="https://jurudesain.com/jasa-desain-kemasan/">Jasa Desain Kemasan</a></li>
+          <li><a href="https://jurudesain.com/jasa-desain-banner/">Jasa Desain Banner</a></li>
+          <li><a href="https://jurudesain.com/jasa-desain-poster/">Jasa Desain Poster</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="fw-semibold mb-2 text-light">Arsip Kategori</div>
+        <ul class="list-unstyled small">
+          <li><a href="#" data-filter-link="desain-grafis">Desain Grafis</a></li>
+          <li><a href="#" data-filter-link="kemasan">Kemasan</a></li>
+          <li><a href="#" data-filter-link="logo">Logo</a></li>
+          <li><a href="#" data-filter-link="cover">Cover</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary mt-4 mb-3">
+    <div class="d-flex flex-wrap justify-content-between gap-2 small">
+      <span>&copy; 2026 <a href="https://jurudesain.com">Jurudesain.com</a>. Hak cipta dilindungi.</span>
+      <span>Arsip dihasilkan pada 23 Mei 2026 &mdash; <a href="https://jurudesain.com">Kunjungi situs aktif</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('#posts-grid .col[data-cat]');
+  const countEl = document.getElementById('post-count');
+  const noResults = document.getElementById('no-results');
+
+  function applyFilter(filter) {
+    let visible = 0;
+    filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
+    cards.forEach(card => {
+      const show = filter === 'all' || card.dataset.cat === filter;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    countEl.textContent = '(' + visible + ' artikel)';
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+    window.scrollTo({ top: document.querySelector('main').offsetTop - 120, behavior: 'smooth' });
+  }
+
+  filterBtns.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.filter)));
+
+  // Footer category links
+  document.querySelectorAll('[data-filter-link]').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); applyFilter(a.dataset.filterLink); });
+  });
+
+  // Badge clicks inside cards
+  document.querySelectorAll('.badge[data-filter]').forEach(badge => {
+    badge.style.cursor = 'pointer';
+    badge.addEventListener('click', e => { e.preventDefault(); applyFilter(badge.dataset.filter); });
+  });
+</script>
+</body>
+</html>
