@@ -12,7 +12,7 @@ A backup of web projects that have been closed, including content from **jurudes
 mukhlisinfo.github.io/
 ├── index.html
 └── archive/
-    ├── index.html         # Archive page → mukhlisinfo.github.io/archive/archive.html
+    ├── index.html           # Archive page → mukhlisinfo.github.io/archive/archive.html
     ├── jurudesain/          # Jurudesain.com archive
     └── landingspage/        # Landingspage.net archive
 </pre>
