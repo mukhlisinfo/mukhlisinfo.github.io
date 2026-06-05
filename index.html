@@ -207,6 +207,11 @@
   </style>
 </head>
 <body>
+  <script>
+  if (sessionStorage.getItem('mukhlisUnlocked') !== '1') {
+    window.location.replace('lock.html');
+  }
+</script>
   <canvas id="bg"></canvas>
 
   <div class="wrapper">
