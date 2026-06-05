@@ -39,6 +39,7 @@
       align-items: center;
       gap: 20px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+      max-width: 600px;
     }
 
     .avatar-wrap { position: relative; }
@@ -73,7 +74,13 @@
       background: linear-gradient(to right, transparent, rgba(255,255,255,0.12), transparent);
     }
 
-    .links { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+    .links { 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      gap: 10px; 
+      width: 100%; 
+    }
 
     .links a {
       display: flex;
@@ -87,6 +94,118 @@
     .links a:hover { color: #88b4ff; }
     .links a svg { opacity: 0.5; flex-shrink: 0; }
     .links a:hover svg { opacity: 1; }
+
+    .divider-2 {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.12), transparent);
+      margin: 10px 0;
+    }
+
+    .icon-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .icon-button {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Skeuomorphic styles */
+    .icon-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 60%);
+      z-index: 1;
+    }
+
+    .icon-button::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, transparent 40%, rgba(0,0,0,0.2) 100%);
+      z-index: 1;
+    }
+
+    .icon-button svg {
+      position: relative;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease;
+      fill: white;
+    }
+
+    .icon-button:hover svg {
+      transform: scale(1.1);
+    }
+
+    .icon-button:active {
+      transform: scale(0.95);
+    }
+
+    /* Finance button - Green/Gold */
+    .icon-finance {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    .icon-finance:hover {
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+    }
+
+    /* Target button - Red/Orange */
+    .icon-target {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    .icon-target:hover {
+      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+    }
+
+    /* Love button - Pink */
+    .icon-love {
+      background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    .icon-love:hover {
+      box-shadow: 0 6px 20px rgba(236, 72, 153, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+    }
+
+    /* Brain button - Purple/Blue */
+    .icon-brain {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    .icon-brain:hover {
+      box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+    }
   </style>
 </head>
 <body>
@@ -102,14 +221,14 @@
 
       <a href="https://github.com/mukhlisinfo/" target="_blank">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.[...]
         </svg>
         github.com/mukhlisinfo
       </a>
 
       <a href="https://medium.com/@mukhlisinfo" target="_blank">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+          <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2[...]
         </svg>
         medium.com/@mukhlisinfo
       </a>
@@ -122,6 +241,36 @@
         mukhlisinfo@gmail.com
       </a>
 
+    </div>
+
+    <div class="divider-2"></div>
+
+    <div class="icon-grid">
+      <a href="/finance" class="icon-button icon-finance" title="Finance">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M11.8 10.9c-2.27-.59-3-1.38-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.37-3.29-3.26-3.59V3h-3v2.26c-1.44.2-2.77.95-2.77 2.4 0 .9.58 1.76 1.89 2.15 2.5.77 3.39 1.77 3.39 2.89 0 1.1-.72 2.05-2.5 2.35v2.34h3v-2.31c.88-.12 1.63-.45 2.25-1.12.35-.37.63-.87.75-1.39H13.6c-.3 1.15-1.59 1.98-2.8 1.98-1.63 0-2.7-.83-2.7-2.09 0-.9.6-1.74 1.8-2.04z"/>
+        </svg>
+      </a>
+
+      <a href="/lifeos" class="icon-button icon-target" title="Life OS">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="12" r="6" fill="#0a0a0f"/>
+          <circle cx="12" cy="12" r="2" fill="white"/>
+        </svg>
+      </a>
+
+      <a href="/penjerat" class="icon-button icon-love" title="Penjerat">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </a>
+
+      <a href="/game" class="icon-button icon-brain" title="Game">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13h-4v4h4v-4zm-4-4h4V5h-4v4z"/>
+        </svg>
+      </a>
     </div>
   </div>
 
