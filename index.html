@@ -25,9 +25,16 @@
       z-index: 0;
     }
 
-    .card {
+    .wrapper {
       position: relative;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .card {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(24px);
@@ -39,7 +46,6 @@
       align-items: center;
       gap: 20px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
-      max-width: 600px;
     }
 
     .avatar-wrap { position: relative; }
@@ -74,13 +80,7 @@
       background: linear-gradient(to right, transparent, rgba(255,255,255,0.12), transparent);
     }
 
-    .links { 
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-      gap: 10px; 
-      width: 100%; 
-    }
+    .links { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; }
 
     .links a {
       display: flex;
@@ -95,182 +95,198 @@
     .links a svg { opacity: 0.5; flex-shrink: 0; }
     .links a:hover svg { opacity: 1; }
 
-    .divider-2 {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.12), transparent);
-      margin: 10px 0;
-    }
-
-    .icon-grid {
+    /* ── DOCK ── */
+    .dock {
       display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-      margin-top: 10px;
+      align-items: flex-end;
+      gap: 14px;
+      padding: 14px 20px 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-radius: 22px;
+      box-shadow:
+        0 8px 32px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.12);
     }
 
-    .icon-button {
+    .dock-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
       position: relative;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+    }
+
+    /* skeuomorphic icon button */
+    .dock-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* Skeuomorphic styles */
-    .icon-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 60%);
-      z-index: 1;
-    }
-
-    .icon-button::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: linear-gradient(135deg, transparent 40%, rgba(0,0,0,0.2) 100%);
-      z-index: 1;
-    }
-
-    .icon-button svg {
       position: relative;
-      z-index: 2;
-      width: 40px;
-      height: 40px;
-      transition: transform 0.2s ease;
-      fill: white;
+      cursor: pointer;
+      transition: transform 0.18s cubic-bezier(.34,1.56,.64,1);
+      /* base 3-D bevel */
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.35) inset,
+        0 -1px 0 rgba(0,0,0,0.3) inset,
+        0 4px 10px rgba(0,0,0,0.55),
+        0 1px 3px rgba(0,0,0,0.4);
     }
 
-    .icon-button:hover svg {
-      transform: scale(1.1);
+    .dock-item:hover .dock-icon {
+      transform: translateY(-10px) scale(1.12);
+    }
+    .dock-item:active .dock-icon {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.25) inset,
+        0 -1px 0 rgba(0,0,0,0.4) inset,
+        0 2px 6px rgba(0,0,0,0.6);
     }
 
-    .icon-button:active {
-      transform: scale(0.95);
-    }
+    /* ── icon colours (skeuomorphic gradients) ── */
 
-    /* Finance button - Green/Gold */
+    /* 1 – Dollar / Finance  →  green */
     .icon-finance {
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+      background: linear-gradient(160deg, #4ade80 0%, #16a34a 45%, #14532d 100%);
+    }
+    .icon-finance::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 55%);
     }
 
-    .icon-finance:hover {
-      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+    /* 2 – Target / LifeOS  →  red-orange */
+    .icon-lifeos {
+      background: linear-gradient(160deg, #fb923c 0%, #dc2626 50%, #7f1d1d 100%);
+    }
+    .icon-lifeos::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 55%);
     }
 
-    /* Target button - Red/Orange */
-    .icon-target {
-      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    /* 3 – Love / Penjerat  →  pink-rose */
+    .icon-penjerat {
+      background: linear-gradient(160deg, #f472b6 0%, #e11d48 50%, #881337 100%);
+    }
+    .icon-penjerat::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 55%);
     }
 
-    .icon-target:hover {
-      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+    /* 4 – Brain / Game  →  purple-violet */
+    .icon-game {
+      background: linear-gradient(160deg, #a78bfa 0%, #7c3aed 50%, #3b0764 100%);
+    }
+    .icon-game::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 55%);
     }
 
-    /* Love button - Pink */
-    .icon-love {
-      background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
-      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
-    }
-
-    .icon-love:hover {
-      box-shadow: 0 6px 20px rgba(236, 72, 153, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
-    }
-
-    /* Brain button - Purple/Blue */
-    .icon-brain {
-      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
-    }
-
-    .icon-brain:hover {
-      box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+    .dock-icon svg {
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
     }
   </style>
 </head>
 <body>
   <canvas id="bg"></canvas>
 
-  <div class="card">
-    <div class="avatar-wrap">
-      <img class="avatar" src="https://avatars.githubusercontent.com/u/76395625?v=4&size=176" alt="mukhlisinfo"/>
+  <div class="wrapper">
+    <div class="card">
+      <div class="avatar-wrap">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/76395625?v=4&size=176" alt="mukhlisinfo"/>
+      </div>
+      <span class="username">mukhlisinfo</span>
+      <div class="divider"></div>
+      <div class="links">
+
+        <a href="https://github.com/mukhlisinfo/" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          github.com/mukhlisinfo
+        </a>
+
+        <a href="https://medium.com/@mukhlisinfo" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+          </svg>
+          medium.com/@mukhlisinfo
+        </a>
+
+        <a href="mailto:mukhlisinfo@gmail.com">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          mukhlisinfo@gmail.com
+        </a>
+
+      </div>
     </div>
-    <span class="username">mukhlisinfo</span>
-    <div class="divider"></div>
-    <div class="links">
 
-      <a href="https://github.com/mukhlisinfo/" target="_blank">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.[...]
-        </svg>
-        github.com/mukhlisinfo
+    <!-- DOCK -->
+    <div class="dock">
+
+      <!-- Finance ($) -->
+      <a class="dock-item" href="/finance">
+        <div class="dock-icon icon-finance">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
       </a>
 
-      <a href="https://medium.com/@mukhlisinfo" target="_blank">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2[...]
-        </svg>
-        medium.com/@mukhlisinfo
+      <!-- Life OS (target) -->
+      <a class="dock-item" href="/lifeos">
+        <div class="dock-icon icon-lifeos">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
       </a>
 
-      <a href="mailto:mukhlisinfo@gmail.com">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="4" width="20" height="16" rx="2"/>
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-        </svg>
-        mukhlisinfo@gmail.com
+      <!-- Penjerat (heart) -->
+      <a class="dock-item" href="/penjerat">
+        <div class="dock-icon icon-penjerat">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
       </a>
 
-    </div>
-
-    <div class="divider-2"></div>
-
-    <div class="icon-grid">
-      <a href="/finance" class="icon-button icon-finance" title="Finance">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M11.8 10.9c-2.27-.59-3-1.38-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.37-3.29-3.26-3.59V3h-3v2.26c-1.44.2-2.77.95-2.77 2.4 0 .9.58 1.76 1.89 2.15 2.5.77 3.39 1.77 3.39 2.89 0 1.1-.72 2.05-2.5 2.35v2.34h3v-2.31c.88-.12 1.63-.45 2.25-1.12.35-.37.63-.87.75-1.39H13.6c-.3 1.15-1.59 1.98-2.8 1.98-1.63 0-2.7-.83-2.7-2.09 0-.9.6-1.74 1.8-2.04z"/>
-        </svg>
+      <!-- Game (brain) -->
+      <a class="dock-item" href="/game">
+        <div class="dock-icon icon-game">
+          <!-- brain SVG -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+          </svg>
+        </div>
       </a>
 
-      <a href="/lifeos" class="icon-button icon-target" title="Life OS">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <circle cx="12" cy="12" r="10"/>
-          <circle cx="12" cy="12" r="6" fill="#0a0a0f"/>
-          <circle cx="12" cy="12" r="2" fill="white"/>
-        </svg>
-      </a>
-
-      <a href="/penjerat" class="icon-button icon-love" title="Penjerat">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-      </a>
-
-      <a href="/game" class="icon-button icon-brain" title="Game">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13h-4v4h4v-4zm-4-4h4V5h-4v4z"/>
-        </svg>
-      </a>
     </div>
   </div>
 
@@ -290,7 +306,7 @@
     function resize() {
       W = canvas.width = window.innerWidth;
       H = canvas.height = window.innerHeight;
-      blobs.forEach((b, i) => {
+      blobs.forEach(b => {
         if (!b.initialized) {
           b.x = Math.random() * W;
           b.y = Math.random() * H;
