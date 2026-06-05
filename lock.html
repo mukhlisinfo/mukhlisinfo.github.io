@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mukhlisinfo</title>
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/76395625?v=4&size=176">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0f;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    #bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-radius: 24px;
+      padding: 48px 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+      animation: fadeUp 0.6s cubic-bezier(.22,1,.36,1) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .avatar-wrap { position: relative; }
+    .avatar-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6e40c9, #1f6feb, #388bfd);
+      z-index: 0;
+      transition: background 0.4s;
+    }
+    .avatar-wrap.unlocked::before {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+    }
+
+    .avatar {
+      position: relative;
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      border: 3px solid #0a0a0f;
+      z-index: 1;
+      display: block;
+    }
+
+    .username {
+      font-size: 22px;
+      font-weight: 600;
+      color: #f0f6fc;
+      letter-spacing: -0.4px;
+    }
+
+    .lock-icon {
+      color: rgba(255,255,255,0.25);
+      transition: color 0.3s;
+      margin-top: -6px;
+    }
+
+    /* ── inline password row ── */
+    .field-row {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 220px;
+    }
+
+    .field-row:focus-within {
+      border-color: rgba(56,139,253,0.55);
+      box-shadow: 0 0 0 3px rgba(56,139,253,0.15), inset 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    .field-row.wrong {
+      border-color: rgba(248,81,73,0.6) !important;
+      box-shadow: 0 0 0 3px rgba(248,81,73,0.12), inset 0 2px 4px rgba(0,0,0,0.3) !important;
+      animation: shake 0.45s cubic-bezier(.36,.07,.19,.97) both;
+    }
+
+    @keyframes shake {
+      10%, 90% { transform: translateX(-2px); }
+      20%, 80% { transform: translateX(4px); }
+      30%, 50%, 70% { transform: translateX(-5px); }
+      40%, 60% { transform: translateX(5px); }
+    }
+
+    .field-row input {
+      flex: 1;
+      padding: 11px 12px 11px 16px;
+      background: transparent;
+      border: none;
+      color: #f0f6fc;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      outline: none;
+      caret-color: #388bfd;
+      min-width: 0;
+    }
+
+    .field-row input::placeholder {
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.05em;
+      font-size: 13px;
+    }
+
+    .arrow-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      height: 42px;
+      background: none;
+      border: none;
+      border-left: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.35);
+      cursor: pointer;
+      transition: color 0.2s, background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .arrow-btn:hover {
+      color: #88b4ff;
+      background: rgba(56,139,253,0.12);
+    }
+
+    .arrow-btn:active {
+      background: rgba(56,139,253,0.2);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <div class="card">
+    <div class="avatar-wrap" id="avatarWrap">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/76395625?v=4&size=176" alt="mukhlisinfo"/>
+    </div>
+
+    <span class="username">mukhlisinfo</span>
+
+    <svg class="lock-icon" id="lockIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+    </svg>
+
+    <div class="field-row" id="fieldRow">
+      <input
+        type="password"
+        id="passInput"
+        placeholder="Password"
+        autocomplete="current-password"
+        spellcheck="false"
+        autofocus
+      />
+      <button class="arrow-btn" id="arrowBtn" tabindex="-1" aria-label="Enter">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    /* ── session check: skip lock if already unlocked this session ── */
+    if (sessionStorage.getItem('mukhlisUnlocked') === '1') {
+      window.location.replace('index.html');
+    }
+
+    /* ── canvas background ── */
+    const canvas = document.getElementById('bg');
+    const ctx    = canvas.getContext('2d');
+    let W, H;
+
+    const blobs = [
+      { x:0, y:0, r:280, vx:0.3,   vy:0.2,  color:'110,64,201' },
+      { x:0, y:0, r:260, vx:-0.25, vy:0.35, color:'31,111,235' },
+      { x:0, y:0, r:220, vx:0.2,   vy:-0.3, color:'56,139,253' },
+      { x:0, y:0, r:200, vx:-0.35, vy:-0.2, color:'88,166,255' },
+      { x:0, y:0, r:180, vx:0.15,  vy:0.4,  color:'100,50,220' },
+    ];
+
+    function resize() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+      blobs.forEach(b => {
+        if (!b.initialized) { b.x = Math.random()*W; b.y = Math.random()*H; b.initialized = true; }
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0,0,W,H);
+      ctx.fillStyle = '#0a0a0f';
+      ctx.fillRect(0,0,W,H);
+      for (const b of blobs) {
+        const g = ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r);
+        g.addColorStop(0, `rgba(${b.color},0.22)`);
+        g.addColorStop(1, `rgba(${b.color},0)`);
+        ctx.beginPath(); ctx.arc(b.x,b.y,b.r,0,Math.PI*2);
+        ctx.fillStyle = g; ctx.fill();
+        b.x+=b.vx; b.y+=b.vy;
+        if(b.x<-b.r) b.x=W+b.r; if(b.x>W+b.r) b.x=-b.r;
+        if(b.y<-b.r) b.y=H+b.r; if(b.y>H+b.r) b.y=-b.r;
+      }
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', resize);
+    resize(); draw();
+
+    /* ── logic ── */
+    const passInput  = document.getElementById('passInput');
+    const fieldRow   = document.getElementById('fieldRow');
+    const lockIcon   = document.getElementById('lockIcon');
+    const avatarWrap = document.getElementById('avatarWrap');
+    const CORRECT    = '666';
+
+    function triggerWrong() {
+      fieldRow.classList.remove('wrong');
+      void fieldRow.offsetWidth;
+      fieldRow.classList.add('wrong');
+      passInput.value = '';
+      setTimeout(() => fieldRow.classList.remove('wrong'), 1600);
+    }
+
+    function handleEnter() {
+      const val = passInput.value;
+      if (!val) return;
+
+      if (val === CORRECT) {
+        lockIcon.innerHTML = `<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>`;
+        lockIcon.style.color = 'rgba(34,197,94,0.75)';
+        avatarWrap.classList.add('unlocked');
+        sessionStorage.setItem('mukhlisUnlocked', '1');
+        setTimeout(() => window.location.replace('index.html'), 700);
+      } else {
+        triggerWrong();
+      }
+    }
+
+    document.getElementById('arrowBtn').addEventListener('click', handleEnter);
+    passInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleEnter(); });
+  </script>
+</body>
+</html>
